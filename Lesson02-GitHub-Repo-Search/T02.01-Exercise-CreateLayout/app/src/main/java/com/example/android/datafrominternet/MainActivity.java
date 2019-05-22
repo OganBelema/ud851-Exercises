@@ -17,22 +17,32 @@ package com.example.android.datafrominternet;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatEditText;
+import android.support.v7.widget.AppCompatTextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    // TODO (26) Create an EditText variable called mSearchBoxEditText
+    //  (26) Create an EditText variable called mSearchBoxEditText
+    private AppCompatEditText mSearchBoxEditText;
 
-    // TODO (27) Create a TextView variable called mUrlDisplayTextView
-    // TODO (28) Create a TextView variable called mSearchResultsTextView
+    //  (27) Create a TextView variable called mUrlDisplayTextView
+    private AppCompatTextView mUrlDisplayTextView;
+
+    //  (28) Create a TextView variable called mSearchResultsTextView
+    private AppCompatTextView mSearchResultsTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // TODO (29) Use findViewById to get a reference to mSearchBoxEditText
+        //  (29) Use findViewById to get a reference to mSearchBoxEditText
+        mSearchBoxEditText = (AppCompatEditText) findViewById(R.id.et_search_box);
 
-        // TODO (30) Use findViewById to get a reference to mUrlDisplayTextView
-        // TODO (31) Use findViewById to get a reference to mSearchResultsTextView
+        //  (30) Use findViewById to get a reference to mUrlDisplayTextView
+        mUrlDisplayTextView = (AppCompatTextView) findViewById(R.id.tv_url_display);
+
+        //  (31) Use findViewById to get a reference to mSearchResultsTextView
+        mSearchResultsTextView = (AppCompatTextView) findViewById(R.id.tv_github_search_results_json);
     }
 }
